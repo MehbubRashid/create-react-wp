@@ -15,6 +15,7 @@ const rl = readline.createInterface({
 
 if ( args.length === 0 ) {
     console.log('\x1b[36m%s\x1b[0m', 'Please specify an app name. Example: npx create-react-wp myapp');
+    rl.close();
 }
 else {
     var appName = args[0];
