@@ -1,7 +1,7 @@
 {
 	"name": "create-react-wp",
-	"version": "1.0.1",
-	"description": "Create a React app that can be used in WordPress Theme or Plugin.",
+	"version": "1.0.2",
+	"description": "NPM module for creating a React app that can be used in WordPress Theme or Plugin.",
 	"main": "index.js",
 	"repository": {
 		"type": "git",

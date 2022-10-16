@@ -1,6 +1,6 @@
 # create-react-wp
 
-  Create a React app that can be used in WordPress Theme or Plugin.
+  NPM module for creating a React app that can be used in WordPress Theme or Plugin
 
 # Description
 
