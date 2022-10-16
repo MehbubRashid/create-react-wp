@@ -1,0 +1,25 @@
+{
+	"name": "create-react-wp",
+	"version": "1.0.0",
+	"description": "Create a React app that can be used in WordPress Theme or Plugin.",
+	"main": "index.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/MehbubRashid/create-react-wp"
+	},
+	"bin": {
+		"create-react-wp": "index.js"
+	},
+	"keywords": [
+		"react",
+		"wordpress",
+		"wp"
+	],
+	"author": "Mehbub Rashid",
+	"license": "ISC",
+	"dependencies": {
+		"download-github-repo": "^0.1.4",
+		"npm": "^6.14.10",
+		"replace": "^1.2.1"
+	}
+}
