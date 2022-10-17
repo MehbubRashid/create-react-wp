@@ -43,18 +43,16 @@ else {
         console.log('\x1b[36m%s\x1b[0m', `Creating app - "${appName}"...`);
     
         // Download to the current directory
-        (async () => {
-
-            await dgit(
-                {
-                    owner: 'MehbubRashid',
-                    repoName: 'create-react-wp',
-                    ref: 'master',
-                    relativePath: 'package',
-                },
-                `./${appName}`,
-            );
-
+        dgit(
+            {
+                owner: 'MehbubRashid',
+                repoName: 'create-react-wp',
+                ref: 'master',
+                relativePath: 'gift',
+            },
+            `./${appName}`,
+        )
+        .then(() => {
             replace({
                 regex: 'create-react-wp',
                 replacement: configs.selectorId,
@@ -108,8 +106,8 @@ else {
                 console.log('\x1b[32m%s\x1b[0m', ` -`);
                 console.log('\x1b[33m%s\x1b[0m', ` Tip: Since WordPress contains react by default, while importing from react, use @wordpress/element instead of react. Example: import {useState, useEffect} from '@wordpress/element'`);
             });
-
-        })();
+        });
+        
     });
 
     
