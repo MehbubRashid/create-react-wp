@@ -1,11 +1,13 @@
 #!/usr/bin/env node
 const args = process.argv.slice(2);
 
-var download = require('download-github-repo');
 var replace = require("replace");
 const pcss = require('process');
 var npm = require('npm');
 const readline = require("readline");
+const dgit = require('@dking/dgit').default;
+
+
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
@@ -41,7 +43,18 @@ else {
         console.log('\x1b[36m%s\x1b[0m', `Creating app - "${appName}"...`);
     
         // Download to the current directory
-        download('MehbubRashid/react-js-in-wordpress', `./${appName}`, function () {
+        (async () => {
+
+            await dgit(
+                {
+                    owner: 'MehbubRashid',
+                    repoName: 'create-react-wp',
+                    ref: 'master',
+                    relativePath: 'package',
+                },
+                `./${appName}`,
+            );
+
             replace({
                 regex: 'create-react-wp',
                 replacement: configs.selectorId,
@@ -95,7 +108,8 @@ else {
                 console.log('\x1b[32m%s\x1b[0m', ` -`);
                 console.log('\x1b[33m%s\x1b[0m', ` Tip: Since WordPress contains react by default, while importing from react, use @wordpress/element instead of react. Example: import {useState, useEffect} from '@wordpress/element'`);
             });
-        });
+
+        })();
     });
 
     

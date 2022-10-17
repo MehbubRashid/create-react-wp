@@ -4,7 +4,7 @@
 
 # Description
 
-  Ever wondered how to use React.js to make powerful frontend in WordPress theme or plugin? Using create-react-wp, you can do it in the most proper way. The problem with create-react-app is - it produces multiple dynamic javascript files thus making it impossible to enqueue the javascripts in WordPress. create-react-wp on the other hand, produces single javascript and css file that we can enqueue. More Interesting fact that most of us don't know is, since version 5.0, WordPress itself contains React.js so we don't have to include React separately and it makes our bundle size extremely small (Few Kilobytes). Features in a nutshell:-
+  Ever wondered how to use React.js to make powerful frontend in WordPress theme or plugin? Using `create-react-wp`, you can do it in the most proper way. The problem with `create-react-app` is - it produces multiple dynamic javascript files thus making it impossible to enqueue the javascripts in WordPress. `create-react-wp` on the other hand, produces single javascript and css file that we can enqueue. More Interesting fact that most of us don't know is, since version 5.0, WordPress itself contains React.js so we don't have to include React separately and it makes our bundle size extremely small (Few Kilobytes). Features in a nutshell:-
   * SASS(scss) support
   * Hot reload (instant refresh without browser reload) feature
   * Developed using the official WordPress & Gutenberg development standard.
