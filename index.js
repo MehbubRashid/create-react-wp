@@ -1,12 +1,11 @@
 #!/usr/bin/env node
 const args = process.argv.slice(2);
 
+var download = require('download-github-repo');
 var replace = require("replace");
+const pcss = require('process');
 var npm = require('npm');
 const readline = require("readline");
-const { recursiveDownload } = require("gh-retrieve");
-
-
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
@@ -42,13 +41,7 @@ else {
         console.log('\x1b[36m%s\x1b[0m', `Creating app - "${appName}"...`);
     
         // Download to the current directory
-        recursiveDownload({
-            author: "MehbubRashid", //repository owner
-            repo: "create-react-wp", //repository name
-            targetdir: "gift", //target directory to download
-            outdir: `./${appName}`, //directory to download in
-        })
-        .then(() => {
+        download('MehbubRashid/react-js-in-wordpress', `./${appName}`, function () {
             replace({
                 regex: 'create-react-wp',
                 replacement: configs.selectorId,
@@ -68,6 +61,7 @@ else {
             console.log('\x1b[32m%s\x1b[0m', 'App created.');
         
             console.log('\x1b[36m%s\x1b[0m', 'Installing npm packages...');
+            pcss.chdir(`./${appName}`);
             npm.load(async function (err) {
                 // handle errors
         
@@ -102,7 +96,6 @@ else {
                 console.log('\x1b[33m%s\x1b[0m', ` Tip: Since WordPress contains react by default, while importing from react, use @wordpress/element instead of react. Example: import {useState, useEffect} from '@wordpress/element'`);
             });
         });
-
     });
 
     
