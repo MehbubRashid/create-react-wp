@@ -1,6 +1,6 @@
 {
 	"name": "create-react-wp",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"description": "NPM module for creating a React app that can be used in WordPress Theme or Plugin.",
 	"main": "index.js",
 	"repository": {
@@ -22,7 +22,7 @@
 	"author": "Mehbub Rashid",
 	"license": "ISC",
 	"dependencies": {
-		"@dking/dgit": "^0.0.12",
+		"gh-retrieve": "^1.1.2",
 		"npm": "^6.14.10",
 		"replace": "^1.2.1"
 	}
