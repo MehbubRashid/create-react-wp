@@ -1,6 +1,6 @@
 {
 	"name": "create-react-wp",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"description": "NPM module for creating a React app that can be used in WordPress Theme or Plugin.",
 	"main": "index.js",
 	"repository": {
@@ -8,7 +8,7 @@
 		"url": "https://github.com/MehbubRashid/create-react-wp"
 	},
 	"bin": {
-		"create-react-wp": "index.js"
+		"create-react-wp": "./index.js"
 	},
 	"keywords": [
 		"react",
